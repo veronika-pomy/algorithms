@@ -23,7 +23,8 @@ function quickSortMiddlePivot (array, left, right) {
 
 function partitionArr(array, left, right) {
 
-    const pivot = Math.floor((left + right)/2); // middle
+    const multiplier = right - left + 1; // defines the range based on ancor values
+    const pivot = Math.floor(Math.random()*multiplier) + left; // selects a rnadom value
 
     while (left <= right) {
         while(array[left] < array[pivot]){
